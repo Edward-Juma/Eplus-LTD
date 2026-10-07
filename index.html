@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eplus LTD | Software Agency for Web, Mobile & Cloud Products</title>
+<meta name="description" content="Eplus LTD designs and engineers fast, secure web apps, mobile apps and cloud platforms for ambitious teams.">
+<meta name="theme-color" content="#081221">
+<meta property="og:title" content="Eplus LTD | Software Agency">
+<meta property="og:description" content="Premium product engineering: web, mobile, cloud and AI.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Eplus LTD","description":"Software agency","url":"https://example.com"}</script>
+</head>
+<body>
+<!-- SVG icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-web" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M8 14l-2 2 2 2M16 14l2 2-2 2"/></symbol>
+<symbol id="i-mobile" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="3"/><path d="M11 18h2"/></symbol>
+<symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.5-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z"/></symbol>
+<symbol id="i-ai" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+<symbol id="i-design" viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</defs></svg>
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="loader" id="loader" role="status" aria-label="Loading"><div class="loader__mark">E</div><div class="loader__bar"><span></span></div></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="noise" aria-hidden="true"></div>
+
+<header class="nav glass" id="nav">
+  <a href="#home" class="logo" aria-label="Eplus LTD home"><svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M9 8v16M9 16l9-8M9 16l9 8"/></svg><span>Eplus<b>LTD</b></span></a>
+  <nav aria-label="Primary"><ul class="nav__links" id="navLinks">
+    <li><a href="#services">Services</a></li><li><a href="#why">Why us</a></li><li><a href="#process">Process</a></li>
+    <li><a href="#projects">Work</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li>
+    <li class="nav__ind" aria-hidden="true"></li></ul></nav>
+  <a href="#contact" class="btn btn--sm magnetic">Start a project <svg class="ico"><use href="#i-arrow"/></svg></a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+</header>
+
+<main id="main">
+<section class="hero" id="home">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="pill glass"><span class="dot"></span>Now booking Q4 projects</p>
+      <h1 class="split">We build software that <span id="typed" class="grad" aria-live="off"></span><span class="caret" aria-hidden="true">|</span></h1>
+      <p class="lead">Eplus LTD is a product engineering studio. We design, build and scale web apps, mobile apps and cloud platforms for teams that ship.</p>
+      <div class="hero__cta">
+        <a href="#contact" class="btn magnetic ripple">Book a discovery call <svg class="ico"><use href="#i-arrow"/></svg></a>
+        <a href="#projects" class="btn btn--ghost magnetic ripple">See our work</a>
+      </div>
+      <dl class="stats">
+        <div><dt>Products shipped</dt><dd><span data-count="120">0</span>+</dd></div>
+        <div><dt>Client retention</dt><dd><span data-count="98">0</span>%</dd></div>
+        <div><dt>Countries served</dt><dd><span data-count="3">0</span></dd></div>
+      </dl>
+    </div>
+    <div class="hero__cards" aria-hidden="true">
+      <div class="fcard glass" data-depth="30"><small>Deploy</small><strong>Production live</strong><i class="bar"><b style="width:92%"></b></i></div>
+      <div class="fcard glass" data-depth="55"><small>Uptime</small><strong class="grad">99.99%</strong></div>
+      <div class="fcard glass" data-depth="20"><small>Latency</small><strong>42 ms</strong><i class="bar"><b style="width:38%"></b></i></div>
+    </div>
+  </div>
+  <a href="#trusted" class="scroll" aria-label="Scroll down"><span></span></a>
+</section>
+
+<section class="trusted" id="trusted" aria-label="Trusted by">
+  <p class="muted center">Trusted by teams building what's next</p>
+  <div class="marquee"><div class="marquee__track">
+    <span>Northwind</span><span>Lumen&nbsp;Pay</span><span>Vertex</span><span>Halcyon</span><span>Orbitly</span><span>Basalt</span><span>Pinecrest</span><span>Nimbo</span>
+    <span>Northwind</span><span>Lumen&nbsp;Pay</span><span>Vertex</span><span>Halcyon</span><span>Orbitly</span><span>Basalt</span><span>Pinecrest</span><span>Nimbo</span>
+  </div></div>
+</section>
+
+<section class="section" id="services"><div class="container">
+  <div class="head" data-aos="fade-up"><h2>Everything you need to launch and scale</h2><p class="muted">Senior engineers and designers, one accountable team.</p></div>
+  <div class="grid3">
+    <article class="card gborder" data-aos="fade-up"><svg class="ico ico--lg"><use href="#i-web"/></svg><h3>Web applications</h3><p>Fast, accessible platforms and dashboards built on modern stacks.</p></article>
+    <article class="card gborder" data-aos="fade-up" data-aos-delay="80"><svg class="ico ico--lg"><use href="#i-mobile"/></svg><h3>Mobile apps</h3><p>Native-feeling iOS and Android apps with one shared codebase.</p></article>
+    <article class="card gborder" data-aos="fade-up" data-aos-delay="160"><svg class="ico ico--lg"><use href="#i-cloud"/></svg><h3>Cloud & DevOps</h3><p>Scalable infrastructure, CI/CD and observability from day one.</p></article>
+    <article class="card gborder" data-aos="fade-up"><svg class="ico ico--lg"><use href="#i-ai"/></svg><h3>AI integration</h3><p>Practical machine-learning features that save your users time.</p></article>
+    <article class="card gborder" data-aos="fade-up" data-aos-delay="80"><svg class="ico ico--lg"><use href="#i-shield"/></svg><h3>Security reviews</h3><p>Threat modelling, code audits and hardening before you launch.</p></article>
+    <article class="card gborder" data-aos="fade-up" data-aos-delay="160"><svg class="ico ico--lg"><use href="#i-design"/></svg><h3>Product design</h3><p>Research-led UX and interface design that converts.</p></article>
+  </div></div></section>
+
+<svg class="divider" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40c240-60 480 60 720 20s480-60 720 0v20H0z"/></svg>
+
+<section class="section" id="why"><div class="container split2">
+  <div data-aos="fade-right"><h2>Engineering you can rely on</h2><p class="lead">We work as an extension of your team, with weekly demos and no surprises.</p>
+    <ul class="checks">
+      <li><svg class="ico"><use href="#i-check"/></svg>Fixed scope, transparent weekly progress</li>
+      <li><svg class="ico"><use href="#i-check"/></svg>Senior-only team, no handoffs to juniors</li>
+      <li><svg class="ico"><use href="#i-check"/></svg>Security and performance built in, not bolted on</li>
+      <li><svg class="ico"><use href="#i-check"/></svg>You own all code and IP from day one</li>
+    </ul></div>
+  <div class="grid2" data-aos="fade-left">
+    <div class="card glass"><h3>2x</h3><p>faster launches than in-house average</p></div>
+    <div class="card glass"><h3>95+</h3><p>Lighthouse score on delivered sites</p></div>
+    <div class="card glass"><h3>24/7</h3><p>monitoring and support plans</p></div>
+    <div class="card glass"><h3>0</h3><p>lock-in. Standard, documented stacks</p></div>
+  </div></div></section>
+
+<section class="section" id="process"><div class="container">
+  <div class="head" data-aos="fade-up"><h2>From idea to launch in four steps</h2></div>
+  <div class="timeline" id="timeline"><div class="timeline__line"><i id="tlFill"></i></div>
+    <ol class="timeline__steps">
+      <li class="card glass" tabindex="0"><span class="step">1</span><h3>Discover</h3><p>Workshops to define goals, users and success metrics.</p></li>
+      <li class="card glass" tabindex="0"><span class="step">2</span><h3>Design</h3><p>Wireframes and clickable prototypes you can test early.</p></li>
+      <li class="card glass" tabindex="0"><span class="step">3</span><h3>Build</h3><p>Two-week sprints with demos and automated testing.</p></li>
+      <li class="card glass" tabindex="0"><span class="step">4</span><h3>Launch</h3><p>Zero-downtime release, monitoring and handover.</p></li>
+    </ol></div></div></section>
+
+<section class="section" id="projects"><div class="container">
+  <div class="head" data-aos="fade-up"><h2>Selected work</h2>
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="chip is-active" data-filter="all">All</button><button class="chip" data-filter="web">Web</button><button class="chip" data-filter="mobile">Mobile</button><button class="chip" data-filter="cloud">Cloud</button></div></div>
+  <div class="grid3 projects">
+    <a href="#contact" class="proj" data-cat="web">
+      <div class="proj__img" style="--h:210; position:relative; overflow:hidden;">
+        <img src="fintech dashboard.jpg" alt="Lumen Pay fintech dashboard" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
+        <span>Fintech dashboard</span>
+      </div>
+      <h3>Lumen Pay</h3>
+      <p class="muted">Real-time payments console</p>
+    </a>
+
+    <a href="#contact" class="proj" data-cat="mobile">
+      <div class="proj__img" style="--h:160; position:relative; overflow:hidden;">
+        <img src="Healthcare Mobile App UI.jpg" alt="Halcyon health app" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
+        <span>Health app</span>
+      </div>
+      <h3>Halcyon</h3>
+      <p class="muted">Patient booking app</p>
+    </a>
+
+    <a href="#contact" class="proj" data-cat="cloud">
+      <div class="proj__img" style="--h:280; position:relative; overflow:hidden;">
+        <img src="data plartform.jpg" alt="Basalt data platform" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
+        <span>Data platform</span>
+      </div>
+      <h3>Basalt</h3>
+      <p class="muted">Multi-region analytics cloud</p>
+    </a>
+
+    <a href="#contact" class="proj" data-cat="web">
+      <div class="proj__img" style="--h:120; position:relative; overflow:hidden;">
+        <img src="market platform.jpg" alt="Orbitly marketplace app" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
+        <span>Marketplace</span>
+      </div>
+      <h3>Orbitly</h3>
+      <p class="muted">B2B ordering portal</p>
+    </a>
+  </div></div></section>
+
+<section class="section" id="cases"><div class="container">
+  <div class="head" data-aos="fade-up"><h2>Results that speak for themselves</h2></div>
+  <article class="case" data-aos="fade-up"><div><h3>Lumen Pay cut checkout time by 47%</h3><p class="muted">We rebuilt their merchant dashboard and payment flow on a modern, event-driven stack.</p><blockquote>“Kestrel shipped in ten weeks what we'd planned for a year.” <cite>Amara O., CTO</cite></blockquote></div>
+    <div class="metrics glass"><div><b data-count="47">0</b>%<small>faster checkout</small></div><div><b data-count="3">0</b>x<small>traffic capacity</small></div></div></article>
+  <article class="case case--rev" data-aos="fade-up"><div><h3>Halcyon reached 100k users in 6 months</h3><p class="muted">A cross-platform app with offline mode, launched on iOS and Android at once.</p><blockquote>“Polished, fast and rock solid from day one.” <cite>Daniel K., Founder</cite></blockquote></div>
+    <div class="metrics glass"><div><b data-count="100">0</b>k<small>active users</small></div><div><b data-count="4">0</b>.8<small>store rating</small></div></div></article>
+</div></section>
+
+<section class="section" id="tech"><div class="container">
+  <div class="head" data-aos="fade-up"><h2>Tools we trust</h2></div>
+  <ul class="techgrid">
+    <li class="glass" data-tip="Type-safe UIs" tabindex="0">React</li><li class="glass" data-tip="Full-stack framework" tabindex="0">Next.js</li><li class="glass" data-tip="Typed JavaScript" tabindex="0">TypeScript</li>
+    <li class="glass" data-tip="APIs and services" tabindex="0">Node.js</li><li class="glass" data-tip="Data and ML" tabindex="0">Python</li><li class="glass" data-tip="Cross-platform apps" tabindex="0">Flutter</li>
+    <li class="glass" data-tip="Reliable databases" tabindex="0">PostgreSQL</li><li class="glass" data-tip="Cloud infrastructure" tabindex="0">AWS</li><li class="glass" data-tip="Containers" tabindex="0">Docker</li>
+    <li class="glass" data-tip="Orchestration" tabindex="0">Kubernetes</li><li class="glass" data-tip="Infrastructure as code" tabindex="0">Terraform</li><li class="glass" data-tip="Design handoff" tabindex="0">Figma</li>
+  </ul></div></section>
+
+<section class="section" id="pricing"><div class="container">
+  <div class="head" data-aos="fade-up">
+    <p class="eyebrow">Packages & support</p>
+    <h2>Flexible pricing built for Kenyan businesses</h2>
+    <p class="muted">From launch-ready websites to long-term product care, we keep everything clear and practical.</p>
+  </div>
+
+  <div class="pricing-grid" role="radiogroup" aria-label="Pricing plans">
+    <article class="pricing-card" role="radio" aria-checked="false" tabindex="0">
+      <div class="plan-head"><span class="plan-tag">Starter</span><h3>Launch Website</h3></div>
+      <div class="price-line"><span class="currency">KSh</span><strong>49,000</strong><small>one-time</small></div>
+      <p class="muted">For small businesses that need a polished web presence fast.</p>
+      <ul>
+        <li>Up to 5 pages</li>
+        <li>Mobile-friendly design</li>
+        <li>Basic SEO setup</li>
+        <li>Domain and hosting guidance</li>
+      </ul>
+      <div class="support-box support-box--soft">
+        <span class="support-label">Monthly support</span>
+        <strong>KSh 8,000/mo</strong>
+        <small>Basic maintenance & updates</small>
+      </div>
+      <a href="#contact" class="btn btn--ghost btn--sm ripple">Get started</a>
+    </article>
+
+    <article class="pricing-card featured" role="radio" aria-checked="true" tabindex="0">
+      <span class="plan-badge">Most popular</span>
+      <div class="plan-head"><span class="plan-tag">Growth</span><h3>Business Site</h3></div>
+      <div class="price-line"><span class="currency">KSh</span><strong>119,000</strong><small>one-time</small></div>
+      <p class="muted">Built for brands that want stronger lead generation and trust.</p>
+      <ul>
+        <li>Custom homepage and sections</li>
+        <li>Lead forms and CRM setup</li>
+        <li>Content management</li>
+        <li>Brand-focused UX design</li>
+      </ul>
+      <div class="support-box support-box--blue">
+        <span class="support-label">Security & updates</span>
+        <strong>KSh 15,000/mo</strong>
+        <small>Security patches, backups & fixes</small>
+      </div>
+      <a href="#contact" class="btn btn--sm ripple">Choose Growth</a>
+    </article>
+
+    <article class="pricing-card" role="radio" aria-checked="false" tabindex="0">
+      <div class="plan-head"><span class="plan-tag">Scale</span><h3>Product Build</h3></div>
+      <div class="price-line"><span class="currency">KSh</span><strong>210,000</strong><small>one-time</small></div>
+      <p class="muted">For businesses ready to launch a real digital product or platform.</p>
+      <ul>
+        <li>Custom dashboards or app UI</li>
+        <li>API and third-party integrations</li>
+        <li>Admin panel and workflow logic</li>
+        <li>Priority technical support</li>
+      </ul>
+      <div class="support-box support-box--green">
+        <span class="support-label">Improvement retainer</span>
+        <strong>KSh 25,000/mo</strong>
+        <small>Feature improvements & enhancements</small>
+      </div>
+      <a href="#contact" class="btn btn--ghost btn--sm ripple">Talk to us</a>
+    </article>
+
+    <article class="pricing-card" role="radio" aria-checked="false" tabindex="0">
+      <div class="plan-head"><span class="plan-tag">Ongoing</span><h3>Care & Support</h3></div>
+      <div class="price-line"><span class="currency">KSh</span><strong>35,000</strong><small>monthly</small></div>
+      <p class="muted">Best for existing sites or apps that need continuous care.</p>
+      <ul>
+        <li>Weekly monitoring</li>
+        <li>Security updates</li>
+        <li>Bug fixes and maintenance</li>
+        <li>Feature requests and QA</li>
+      </ul>
+      <div class="support-box support-box--purple">
+        <span class="support-label">Priority support</span>
+        <strong>KSh 35,000/mo</strong>
+        <small>Ongoing maintenance, updates & support</small>
+      </div>
+      <a href="#contact" class="btn btn--ghost btn--sm ripple">Book support</a>
+    </article>
+  </div>
+</div></section>
+
+<section class="section booking" id="booking"><div class="container">
+  <div class="booking-box glass" data-aos="fade-up">
+    <div class="booking-copy">
+      <p class="eyebrow">Book a project</p>
+      <h2>Tell us what you need, and we’ll shape the right scope.</h2>
+      <p class="muted">Need a website, app, AI workflow, payment integration or long-term support? Share the brief and we’ll respond with the right next step.</p>
+    </div>
+    <form class="booking-form" id="bookingForm">
+      <div class="field-row">
+        <label>
+          <span>Full name</span>
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="you@company.com" required>
+        </label>
+      </div>
+      <div class="field-row">
+        <label>
+          <span>Service</span>
+          <select name="service" required>
+            <option value="">Select a service</option>
+            <option>Website development</option>
+            <option>Mobile app development</option>
+            <option>Custom software</option>
+            <option>AI & chatbot</option>
+            <option>Payments integration</option>
+            <option>Ongoing support</option>
+          </select>
+        </label>
+        <label>
+          <span>Budget</span>
+          <select name="budget" required>
+            <option value="">Select a range</option>
+            <option>KSh 50k – 150k</option>
+            <option>KSh 150k – 300k</option>
+            <option>KSh 300k – 600k</option>
+            <option>KSh 600k+</option>
+          </select>
+        </label>
+      </div>
+      <label>
+        <span>Project details</span>
+        <textarea name="message" rows="5" placeholder="Tell us about your business, goals, timeline and what you need built." required></textarea>
+      </label>
+      <button type="submit" class="btn btn--sm ripple">Request a quote</button>
+    </form>
+  </div>
+</div></section>
+
+<section class="section" id="faq"><div class="container narrow">
+  <div class="head" data-aos="fade-up"><h2>Questions, answered</h2></div>
+  <div class="faq">
+    <details class="card glass"><summary>How long does a typical project take?</summary><div><p>MVPs ship in 6 to 10 weeks. Larger platforms are planned in phases.</p></div></details>
+    <details class="card glass"><summary>Do we own the code?</summary><div><p>Yes. You own all source code, designs and IP on final payment.</p></div></details>
+    <details class="card glass"><summary>Do you offer ongoing support?</summary><div><p>Yes. Support plans cover monitoring, updates and new features.</p></div></details>
+    <details class="card glass"><summary>Can you join an existing project?</summary><div><p>Yes. We start with a short code and architecture review.</p></div></details>
+  </div></div></section>
+
+<section class="cta" id="contact"><div class="blob b1"></div><div class="blob b2"></div>
+  <div class="container center" data-aos="zoom-in"><h2>Ready to build something remarkable?</h2><p class="lead">Tell us about your project. We reply within one business day.</p>
+    <a href="mailto:info@eplusltd.co.ke" class="btn btn--lg magnetic ripple">Start your project <svg class="ico"><use href="#i-arrow"/></svg></a></div></section>
+</main>
+
+<footer class="footer"><div class="container fgrid">
+  <div><a href="#home" class="logo"><svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M9 8v16M9 16l9-8M9 16l9 8"/></svg><span>Eplus<b>LTD</b></span></a><p class="muted">Software engineering for ambitious teams.</p>
+    <form class="news" id="news"><label for="em" class="sr">Email address</label><input id="em" type="email" placeholder="you@company.com" required><button class="btn btn--sm ripple">Subscribe</button></form><p id="newsMsg" class="muted" role="status"></p></div>
+  <nav aria-label="Quick links"><h4>Quick links</h4><a href="#services">Services</a><a href="#projects">Work</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
+  <div><h4>Contact</h4><a href="mailto:info@eplusltd.co.ke">info@eplusltd.co.ke</a><p class="muted">+254 799 514 830<br>Nairobi, Kenya</p>
+    <div class="social"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="X">X</a><a href="#" aria-label="GitHub">Gh</a></div></div>
+  <div class="footer-map-wrap">
+    <h4>Find us in Lower Kabete</h4>
+    <div class="location-card glass">
+      <div class="map-shell" aria-label="Map showing Lower Kabete">
+        <iframe title="Lower Kabete map" src="https://www.google.com/maps?q=Lower%20Kabete%20Nairobi&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div><p class="copy muted center">© 2026 Eplus LTD. All rights reserved.</p></footer>
+<button class="totop" id="totop" aria-label="Back to top"><svg class="ico"><use href="#i-arrow"/></svg></button>
+<a class="wa-float" href="https://wa.me/254799514830" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.52 3.48A11.74 11.74 0 0 0 12.06 0C5.5 0 .13 5.36.13 11.94c0 2.1.55 4.15 1.6 5.95L0 24l6.32-1.66a11.94 11.94 0 0 0 5.74 1.74h.01c6.56 0 11.93-5.37 11.93-11.94 0-3.18-1.24-6.17-3.48-8.42Zm-8.46 18.4h-.01a9.88 9.88 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.65-.24-.38A9.83 9.83 0 0 1 2.1 12c0-5.46 4.45-9.9 9.94-9.9a9.9 9.9 0 0 1 9.9 9.9c0 5.46-4.44 9.9-9.91 9.9Zm5.44-7.42c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.69.15-.2.3-.78.97-.96 1.17-.18.2-.35.22-.65.08-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.52-1.8-1.7-2.1-.18-.3-.02-.47.13-.62.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.64-.94-2.24-.25-.58-.5-.5-.68-.5h-.58c-.2 0-.52.07-.8.37-.28.3-1.07 1.04-1.07 2.54s1.1 2.94 1.25 3.15c.15.2 2.16 3.3 5.23 4.63.73.31 1.3.5 1.74.64.74.24 1.42.2 1.95.13.6-.09 1.77-.72 2.01-1.41.25-.7.25-1.3.17-1.42-.07-.12-.28-.2-.58-.35Z"/></svg>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js" defer></script>
+</body></html>
