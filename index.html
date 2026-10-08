@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Eplus LTD | Software Agency for Web, Mobile & Cloud Products</title>
 <meta name="description" content="Eplus LTD designs and engineers fast, secure web apps, mobile apps and cloud platforms for ambitious teams.">
-<meta name="theme-color" content="#081221">
+<meta name="theme-color" content="#120b1d">
 <meta property="og:title" content="Eplus LTD | Software Agency">
 <meta property="og:description" content="Premium product engineering: web, mobile, cloud and AI.">
 <meta property="og:type" content="website">
@@ -33,7 +33,12 @@
 <a class="skip" href="#main">Skip to content</a>
 <div class="loader" id="loader" role="status" aria-label="Loading"><div class="loader__mark">E</div><div class="loader__bar"><span></span></div></div>
 <div class="cursor" id="cursor" aria-hidden="true"></div>
-<canvas id="bg" aria-hidden="true"></canvas>
+<div class="background-stage" aria-hidden="true">
+  <video class="background-video" autoplay muted loop playsinline preload="metadata" tabindex="-1">
+    <source src="Eplus LTD Video 1.mp4" type="video/mp4">
+  </video>
+  <div class="background-tint"></div>
+</div>
 <div class="noise" aria-hidden="true"></div>
 
 <header class="nav glass" id="nav">
@@ -48,7 +53,6 @@
 
 <main id="main">
 <section class="hero" id="home">
-  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
   <div class="container hero__grid">
     <div class="hero__copy">
       <p class="pill glass"><span class="dot"></span>Now booking Q4 projects</p>
@@ -308,6 +312,7 @@
         <textarea name="message" rows="5" placeholder="Tell us about your business, goals, timeline and what you need built." required></textarea>
       </label>
       <button type="submit" class="btn btn--sm ripple">Request a quote</button>
+      <p id="bookingStatus" role="status" aria-live="polite"></p>
     </form>
   </div>
 </div></section>
@@ -353,5 +358,36 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init({ publicKey: "jdhKrf5ukWoK143rn" });
+
+  const bookingForm = document.getElementById("bookingForm");
+  const bookingStatus = document.getElementById("bookingStatus");
+
+  bookingForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton = bookingForm.querySelector('[type="submit"]');
+    submitButton.disabled = true;
+    bookingStatus.textContent = "Sending your request…";
+
+    try {
+      await emailjs.sendForm(
+        "service_50onn2k",
+        "template_0sh87ws",
+        bookingForm
+      );
+      bookingStatus.textContent = "Thanks — your request has been sent.";
+      bookingForm.reset();
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      bookingStatus.textContent =
+        "Sorry, we couldn't send your request. Please try again or email us directly.";
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+</script>
 <script src="script.js" defer></script>
 </body></html>

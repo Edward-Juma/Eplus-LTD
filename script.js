@@ -1,4 +1,4 @@
-/* Kestrel Labs: main script. Sections: helpers, loader, smooth scroll, Three.js bg,
+/* Kestrel Labs: main script. Sections: helpers, loader, smooth scroll,
    hero, nav, counters, timeline, filters, pricing, swiper, UI extras */
 (() => {
   'use strict';
@@ -57,35 +57,6 @@
       gsap.to(o, { v: end, duration: reduce ? 0 : 2, ease: 'power2.out', onUpdate: () => el.textContent = Math.round(o.v) }) });
   }
   $$('[data-count]').forEach(el => { if (!el.closest('.stats')) countUp(el); });
-
-  /* Three.js: glowing particles + wave field, lazily paused when tab hidden */
-  (function bg() {
-    if (typeof THREE === 'undefined') return;
-    const canvas = $('#bg'), scene = new THREE.Scene();
-    const cam = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, .1, 100); cam.position.z = 6;
-    const r = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: false });
-    r.setPixelRatio(Math.min(devicePixelRatio, 1.5)); r.setSize(innerWidth, innerHeight);
-    const N = innerWidth < 700 ? 500 : 1400, pos = new Float32Array(N * 3), col = new Float32Array(N * 3);
-    const cols = [new THREE.Color('#2563EB'), new THREE.Color('#06B6D4'), new THREE.Color('#22C55E')];
-    for (let i = 0; i < N; i++) {
-      pos.set([(Math.random() - .5) * 20, (Math.random() - .5) * 14, (Math.random() - .5) * 10], i * 3);
-      const c = cols[i % 3]; col.set([c.r, c.g, c.b], i * 3);
-    }
-    const g = new THREE.BufferGeometry();
-    g.setAttribute('position', new THREE.BufferAttribute(pos, 3)); g.setAttribute('color', new THREE.BufferAttribute(col, 3));
-    const pts = new THREE.Points(g, new THREE.PointsMaterial({ size: .045, vertexColors: true, transparent: true, opacity: .8, blending: THREE.AdditiveBlending, depthWrite: false }));
-    scene.add(pts);
-    let run = true;
-    addEventListener('resize', () => { cam.aspect = innerWidth / innerHeight; cam.updateProjectionMatrix(); r.setSize(innerWidth, innerHeight); });
-    document.addEventListener('visibilitychange', () => { run = !document.hidden; if (run) loop(); });
-    const clock = new THREE.Clock();
-    (function loop() {
-      if (!run) return; requestAnimationFrame(loop);
-      const t = reduce ? 0 : clock.getElapsedTime();
-      pts.rotation.y = t * .03; pts.rotation.x = 0; pts.position.y = scrollY * .0012;
-      r.render(scene, cam);
-    })();
-  })();
 
   /* Nav: glass shrink, active section, sliding indicator */
   const links = $$('.nav__links a'), ind = $('.nav__ind');
